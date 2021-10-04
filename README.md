@@ -20,6 +20,8 @@ Screenshot of filter SEPIA
     
     - Ubuntu 20.04.3 LTS (Focal Fossa). Laptop Acer Extensa 5630 with PHP 7.4.3 (cli) (built: Aug 13 2021 05:39:12) ( NTS )
 
+ # SERVER REQUERIMENTS:
+ 
     - PHP with GD enabled: sudo apt install php-gd
     
     - PHP with Imagick for some functions: sudo apt install php-imagick
