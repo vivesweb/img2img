@@ -59,6 +59,33 @@ Screenshot of filter SEPIA
          $img2img->save( '/tmp/img2img_result_3.jpg' );
  
  
+# DEFAULTS:
+
+You can set the sizes that you normally work:
+
+		'arr_thb_default_sizes' => [ '2048x1152' => [2048, 1152],  '1920x1080' => [1920, 1080], '1366x768' => [1366, 768], '640x480' => [640, 480], '512x384' => [512, 384], '320x240' => [320, 240], '200x150' => [200, 150] ],
+		
+Define the quality for your images. By default 100 (best quality but more file size)
+
+		'quality' => 100, // 100 = best (more file size), 0 = poor (less file size)
+		
+You can define your working directory for temporaliy files. Default /tmp
+
+		'tmpdir' => '/tmp',
+		
+For Pdf's you can set the dpis: Default 300 dpis
+
+		'pdfresolution' => 300, // When open pdf file for capture first page as image
+		
+You can autodetect the file format. Is unset by default. Some files take errors, but if you want to try to autodetect by the system, set it to true
+
+		'autodetect_mimetypes' => false, // See notes at file_extension()
+		
+You can to see the errors or hide it. By default is set to SHOW ERRORS
+
+		'debug' => true // Set to true to see errors
+
+
 # RESUME OF METHODS:
 
 - **CREATE IMG2IMG:**
