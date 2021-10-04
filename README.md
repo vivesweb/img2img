@@ -12,7 +12,7 @@ Screenshot of filter SEPIA
 
  # REQUERIMENTS:
  
- - A minimum (minimum, minimum, minimum requeriments is needed). Tested on:
+    - A minimum (minimum, minimum, minimum requeriments is needed). Tested on:
  		
     - Simple Raspberry pi (B +	512MB	700 MHz ARM11) with Raspbian Lite PHP7.3 (i love this gadgets)  :heart_eyes:
  		
