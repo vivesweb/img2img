@@ -107,7 +107,7 @@ Example:
 *set_gd( $gd )*
 
 Example:
-
+	$gd = imagecreatefromjpeg( __DIR__.'/source_example.jpg');
         $img2img->set_gd( $gd );
 
 
