@@ -26,7 +26,9 @@ Screenshot of filter SEPIA
     
     - For open pdf's, if you get attempt to perform an operation not allowed by the security policy `PDF'
        Add 
-       <policy domain="coder" rights="read | write" pattern="PDF" />
+       
+       < policy domain="coder" rights="read | write" pattern="PDF" />
+       
        just before </policymap> in /etc/ImageMagick-7/policy.xml
        - Change ImageMagick-7 with your Imagick version
  
@@ -198,7 +200,7 @@ filter can be one of the following:
 	 * IMG_FILTER_COLORIZE: Value of green component.
 	 * IMG_FILTER_PIXELATE: Whether to use advanced pixelation effect or not (defaults to false).
 	 * IMG_FILTER_SCATTER: Effect addition level.
-	 * IMG_FILTER_SEPIA: arg1 = 2: Defines % of sepcia. arg1 = 4: Define tone of sepia in Imagick sepiaToneImage()
+	 * IMG_FILTER_SEPIA: if (arg1 == 2) Defines % of sepia. if(arg1 == 4): Define tone of sepia in Imagick sepiaToneImage()
 	 * arg3
 	 * IMG_FILTER_COLORIZE: Value of blue component.
 	 * IMG_FILTER_SCATTER: Optional array indexed color values to apply effect at.
