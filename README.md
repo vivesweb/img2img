@@ -75,7 +75,7 @@ You can define your working directory for temporaliy files. Default /tmp
 		
 For Pdf's you can set the dpis: Default 300 dpis
 
-		'pdfresolution' => 300, // When open pdf file for capture first page as image
+		'pdfresolution' => 300, // When open pdf file for capture page as image
 		
 You can autodetect the file format. Is unset by default. Some files take errors, but if you want to try to autodetect by the system, set it to true
 
