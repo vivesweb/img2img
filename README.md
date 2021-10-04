@@ -69,7 +69,7 @@ Define the quality for your images. By default 100 (best quality but more file s
 
 		'quality' => 100, // 100 = best (more file size), 0 = poor (less file size)
 		
-You can define your working directory for temporaliy files. Default /tmp
+You can define your working directory for temporary files. Default /tmp
 
 		'tmpdir' => '/tmp',
 		
