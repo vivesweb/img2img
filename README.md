@@ -2,7 +2,7 @@
 
 ## V.1.0.0
 
-This class try to manage all types of images. Also can read pdf's or PSD (photoshop) files to take previews of the documents. Can create WEBP files. It try to autosearch format of image with some methods. At least will try with file extension.
+This class in pure PHP try to manage all types of images. Also can read pdf's or PSD (photoshop) files to take previews of the documents. Can create WEBP files. It try to autosearch format of image with some methods. At least will try with file extension.
 
 # SAMPLE:
 ![Sample of filter SEPIA](https://github.com/vivesweb/img2img/blob/main/img2img_result_3.jpg?raw=true)
