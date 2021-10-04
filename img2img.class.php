@@ -88,12 +88,12 @@ class img2img
 
 
 
-	public function __construct( $original_file ) {
+	public function __construct( $original_file, $pdf_page = 0 ) {
 		if( is_string($original_file) ){
 			$this->original_file_name = $original_file;
 			$this->filetype = $this->file_extension( $original_file );
 
-			$this->load_image_from_file( $original_file );
+			$this->load_image_from_file( $original_file, $pdf_page );
 		} else {
 			$this->set_gd( $original_file );
 		}
@@ -117,7 +117,7 @@ class img2img
 	 * 
 	 * @param string $filename
 	 */
-	private function load_image_from_file( $filename ){
+	private function load_image_from_file( $filename, $pdf_page = 0 ){
 		$this->gd = null;
 
 		// try to load with standard method
@@ -160,7 +160,7 @@ class img2img
 									try {
 										$pathnewfile = $this->cfg_default['tmpdir'].'/img2img_'.$this->filetype.'_'.time().'.jpg';
 
-										$myurl = $filename.'[0]'; // Page 0 of the pdf
+										$myurl = $filename.'['.$pdf_page.']'; // For first page, $pdf_page will be 0
 										$imagepdf = new Imagick();
 										$imagepdf->setResolution( $this->cfg_default[ 'pdfresolution' ] , $this->cfg_default[ 'pdfresolution' ] );
 										$imagepdf->readImage($myurl);
