@@ -1,4 +1,4 @@
-# img2img. PHP Converter, open pdfs & psd, do resizes & some filters in images as SEPIA
+# img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA
 
 ## V.1.0.0
 
