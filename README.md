@@ -42,6 +42,10 @@ Screenshot of filter SEPIA
  
  *example.php* -> **example file**
  
+ *source_example_psd.psd, source_example_pdf.pdf, source_example.jpg* are original images to use to reproduce test
+ 
+ *img2img_resultxxx.xxx* are examples of the result that you can see at exemple.php
+ 
   # INSTALLATION:
  A lot of easy :smiley:. It is written in PURE PHP. Only need to include the files. Tested on basic PHP installation
  
