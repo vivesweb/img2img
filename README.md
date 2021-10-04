@@ -218,7 +218,7 @@ filter can be one of the following:
 	 * IMG_FILTER_SCATTER: Applies scatter effect to the image, use args and arg2 to define the effect strength and additionally arg3 to only apply the on select pixel colors.
 	 * IMG_FILTER_SEPIA: Use arg1 to use between different types of sepia and arg2 & arg3 to define de effect
 	 * IMG_FILTER_BLACK_WHITE: Use to create a black & white image
-	 * IMG_FILTER_VIGNETE: arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
+	 * IMG_FILTER_VIGNETTE: arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
 	 * args
 	 * IMG_FILTER_BRIGHTNESS: Brightness level.
 	 * IMG_FILTER_CONTRAST: Contrast level.
