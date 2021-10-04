@@ -21,7 +21,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @link https://rafamartin10.blogspot.com/
  * @since October 2021
- * @version 1.0.0
+ * @version 1.0.1
  * @license GNU General Public License v3.0
  * 
  * 
@@ -29,12 +29,49 @@
 
 
  // For use mime_types see notes at  file_extension(()
+ use Zaachi\Image\Filter;
 
  include __DIR__ . '/mime_types.php';  // Used in Mime types functions
+ include __DIR__ . '/PHP-Instagram-effects-master/src/Image/Filter.php';  // For instagram filters
 
- define( 'IMG_FILTER_SEPIA', 'IMG_FILTER_SEPIA');
- define( 'IMG_FILTER_BLACK_WHITE', 'IMG_FILTER_BLACK_WHITE'); // Note that is different black & white that gray scale
- define( 'IMG_FILTER_VIGNETTE', 'IMG_FILTER_VIGNETTE');
+ define( 'IMG_FILTER_SEPIA', 				'IMG_FILTER_SEPIA');
+ define( 'IMG_FILTER_BLACK_WHITE', 			'IMG_FILTER_BLACK_WHITE'); // Note that is different black & white that gray scale
+ define( 'IMG_FILTER_VIGNETTE', 			'IMG_FILTER_VIGNETTE');
+
+ define( 'IMG_FILTER_INSTGR_BUBBLES', 		'IMG_FILTER_INSTGR_BUBBLES');
+ define( 'IMG_FILTER_INSTGR_COLORISE', 		'IMG_FILTER_INSTGR_COLORISE');
+ define( 'IMG_FILTER_INSTGR_SEPIA', 		'IMG_FILTER_INSTGR_SEPIA');
+ define( 'IMG_FILTER_INSTGR_SEPIA2', 		'IMG_FILTER_INSTGR_SEPIA2');
+ define( 'IMG_FILTER_INSTGR_SHARPEN', 		'IMG_FILTER_INSTGR_SHARPEN');
+ define( 'IMG_FILTER_INSTGR_EMBOSS', 		'IMG_FILTER_INSTGR_EMBOSS');
+ define( 'IMG_FILTER_INSTGR_COOL', 			'IMG_FILTER_INSTGR_COOL');
+ define( 'IMG_FILTER_INSTGR_OLD', 			'IMG_FILTER_INSTGR_OLD');
+ define( 'IMG_FILTER_INSTGR_OLD2', 			'IMG_FILTER_INSTGR_OLD2');
+ define( 'IMG_FILTER_INSTGR_OLD3', 			'IMG_FILTER_INSTGR_OLD3');
+ define( 'IMG_FILTER_INSTGR_LIGHT', 		'IMG_FILTER_INSTGR_LIGHT');
+ define( 'IMG_FILTER_INSTGR_AQUA', 			'IMG_FILTER_INSTGR_AQUA');
+ define( 'IMG_FILTER_INSTGR_FUZZY',	 		'IMG_FILTER_INSTGR_FUZZY');
+ define( 'IMG_FILTER_INSTGR_BOOST', 		'IMG_FILTER_INSTGR_BOOST');
+ define( 'IMG_FILTER_INSTGR_BOOST2', 		'IMG_FILTER_INSTGR_BOOST2');
+ define( 'IMG_FILTER_INSTGR_GRAY',		 	'IMG_FILTER_INSTGR_GRAY');
+ define( 'IMG_FILTER_INSTGR_ANTIQUE', 		'IMG_FILTER_INSTGR_ANTIQUE');
+ define( 'IMG_FILTER_INSTGR_BLACKWHITE', 	'IMG_FILTER_INSTGR_BLACKWHITE');
+ define( 'IMG_FILTER_INSTGR_BLUR', 			'IMG_FILTER_INSTGR_BLUR');
+ define( 'IMG_FILTER_INSTGR_VINTAGE', 		'IMG_FILTER_INSTGR_VINTAGE');
+ define( 'IMG_FILTER_INSTGR_CONCENTRATE', 	'IMG_FILTER_INSTGR_CONCENTRATE');
+ define( 'IMG_FILTER_INSTGR_HERMAJESTY', 	'IMG_FILTER_INSTGR_HERMAJESTY');
+ define( 'IMG_FILTER_INSTGR_FRESHBLUE', 	'IMG_FILTER_INSTGR_FRESHBLUE');
+ define( 'IMG_FILTER_INSTGR_TENDER', 		'IMG_FILTER_INSTGR_TENDER');
+ define( 'IMG_FILTER_INSTGR_DREAM', 		'IMG_FILTER_INSTGR_DREAM');
+ define( 'IMG_FILTER_INSTGR_FROZEN', 		'IMG_FILTER_INSTGR_FROZEN');
+ define( 'IMG_FILTER_INSTGR_FOREST', 		'IMG_FILTER_INSTGR_FOREST');
+ define( 'IMG_FILTER_INSTGR_RAIN', 			'IMG_FILTER_INSTGR_RAIN');
+ define( 'IMG_FILTER_INSTGR_ORANGEPEEL', 	'IMG_FILTER_INSTGR_ORANGEPEEL');
+ define( 'IMG_FILTER_INSTGR_DARKEN',	 	'IMG_FILTER_INSTGR_DARKEN');
+ define( 'IMG_FILTER_INSTGR_SUMMER', 		'IMG_FILTER_INSTGR_SUMMER');
+ define( 'IMG_FILTER_INSTGR_RETRO', 		'IMG_FILTER_INSTGR_RETRO');
+ define( 'IMG_FILTER_INSTGR_COUNTRY', 		'IMG_FILTER_INSTGR_COUNTRY');
+ define( 'IMG_FILTER_INSTGR_WASHED', 		'IMG_FILTER_INSTGR_WASHED');
 
 
 class img2img
@@ -825,6 +862,176 @@ class img2img
 														unset( $filenametmp );
 										}
 										break;
+			case  IMG_FILTER_INSTGR_BUBBLES:			$filter = (new Filter($this->gd))->bubbles();
+ 														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+
+			case  IMG_FILTER_INSTGR_COLORISE:			$filter = (new Filter($this->gd))->colorise();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+
+			case  IMG_FILTER_INSTGR_SEPIA:				$filter = (new Filter($this->gd))->sepia();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+																	
+			case  IMG_FILTER_INSTGR_SEPIA2:				$filter = (new Filter($this->gd))->sepia2();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+
+			case  IMG_FILTER_INSTGR_SHARPEN:			$filter = (new Filter($this->gd))->sharpen();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+		
+			case  IMG_FILTER_INSTGR_EMBOSS:				$filter = (new Filter($this->gd))->emboss();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_COOL:				$filter = (new Filter($this->gd))->cool();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_OLD:				$filter = (new Filter($this->gd))->old();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_OLD2:				$filter = (new Filter($this->gd))->old2();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_OLD3:				$filter = (new Filter($this->gd))->old3();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_LIGHT:				$filter = (new Filter($this->gd))->light();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case IMG_FILTER_INSTGR_AQUA:				$filter = (new Filter($this->gd))->aqua();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+
+			case  IMG_FILTER_INSTGR_FUZZY:				$filter = (new Filter($this->gd))->fuzzy();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_BOOST:				$filter = (new Filter($this->gd))->boost();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_BOOST2:				$filter = (new Filter($this->gd))->boost2();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_GRAY:				$filter = (new Filter($this->gd))->gray();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_ANTIQUE:			$filter = (new Filter($this->gd))->antique();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_BLACKWHITE:			$filter = (new Filter($this->gd))->blackwhite();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;			
+
+			case  IMG_FILTER_INSTGR_BLUR:				$filter = (new Filter($this->gd))->blur();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;			
+
+			case  IMG_FILTER_INSTGR_VINTAGE:			$filter = (new Filter($this->gd))->vintage();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;			
+
+			case  IMG_FILTER_INSTGR_CONCENTRATE:		$filter = (new Filter($this->gd))->concentrate();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;			
+
+			case  IMG_FILTER_INSTGR_HERMAJESTY:			$filter = (new Filter($this->gd))->hemajesty();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+														
+			case  IMG_FILTER_INSTGR_FRESHBLUE:			$filter = (new Filter($this->gd))->freshblue();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_TENDER:				$filter = (new Filter($this->gd))->tender();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_DREAM:				$filter = (new Filter($this->gd))->dream();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_FROZEN:				$filter = (new Filter($this->gd))->frozen();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_FOREST:				$filter = (new Filter($this->gd))->forest();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_RAIN:				$filter = (new Filter($this->gd))->rain();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_ORANGEPEEL:			$filter = (new Filter($this->gd))->orangepeel();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_DARKEN:				$filter = (new Filter($this->gd))->darken();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_SUMMER:				$filter = (new Filter($this->gd))->summer();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_RETRO:				$filter = (new Filter($this->gd))->retro();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_COUNTRY:			$filter = (new Filter($this->gd))->country();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
+			case  IMG_FILTER_INSTGR_WASHED:				$filter = (new Filter($this->gd))->washed();
+														$this->gd = $filter->getImage();
+														unset( $filter );
+														break;
+			
 
 			default:				imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3, $arg4 );
 									break;
