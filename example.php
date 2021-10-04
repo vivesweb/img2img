@@ -24,10 +24,9 @@
  * @version 1.0.1
  * @license GNU General Public License v3.0
  */
-
+   
 
  include __DIR__ . '/img2img.class.php';
-
 
 
 // filter instragram old
@@ -36,7 +35,6 @@ $img2img->filter( IMG_FILTER_INSTGR_OLD );
 $img2img->save( '/tmp/img2img_result_0.jpg' );
 unset( $img2img );
  
-
  // Example of use directly from php GD
 $test = imagecreatefromjpeg( __DIR__.'/source_example.jpg');
 $img2img = new img2img( $test );
