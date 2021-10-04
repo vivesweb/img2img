@@ -81,7 +81,7 @@ class img2img
 		'arr_thb_default_sizes' => [ '2048x1152' => [2048, 1152],  '1920x1080' => [1920, 1080], '1366x768' => [1366, 768], '640x480' => [640, 480], '512x384' => [512, 384], '320x240' => [320, 240], '200x150' => [200, 150] ],
 		'quality' => 100, // 100 = best (more file size), 0 = poor (less file size)
 		'tmpdir' => '/tmp',
-		'pdfresolution' => 300, // When open pdf file for capture first page as image
+		'pdfresolution' => 300, // When open pdf file for capture page as image
 		'autodetect_mimetypes' => false, // See notes at file_extension()
 		'debug' => true // Set to true to see errors
 	];
