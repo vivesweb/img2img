@@ -24,7 +24,7 @@ Sample of filter SEPIA
  
     - PHP with GD enabled: sudo apt install php-gd
     
-    - PHP with Imagick for some functions: sudo apt install php-imagick
+    - PHP with Imagick for some functions. It is not required for by most methods, but in some, like reading pdf or psd, you will need: sudo apt install php-imagick
     
     - For open pdf's, if you get attempt to perform an operation not allowed by the security policy `PDF'
        Add 
