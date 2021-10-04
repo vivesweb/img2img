@@ -1,6 +1,6 @@
 # img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA
 
-## V.1.0.0
+## V.1.0.1
 
 This class in pure PHP try to manage all types of images. Also can read pdf's or PSD (photoshop) files to take previews of the documents. Can create WEBP files. It try to autosearch format of image with some methods. At least will try with file extension.
 
@@ -33,6 +33,8 @@ Sample of filter SEPIA
        
        just before </policymap> in /etc/ImageMagick-7/policy.xml
        - Change ImageMagick-7 with your Imagick version
+      
+    - Requires https://github.com/zaachi/PHP-Instagram-effects
  
  
   # FILES:
