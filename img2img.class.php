@@ -16,6 +16,7 @@
  *   <policy domain="coder" rights="read | write" pattern="PDF" />
  *   just before </policymap> in /etc/ImageMagick-7/policy.xml
  *   * Change ImageMagick-7 with your Imagick version
+ * - Support for instagram filters https://github.com/zaachi/PHP-Instagram-effects
  * 
  * @author Rafael Martin Soto
  * @author {@link https://www.inatica.com/ Inatica}
