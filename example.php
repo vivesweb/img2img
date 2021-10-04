@@ -59,7 +59,7 @@ unset( $img2img );
 
 
 // Example of use from file & use of array default sizes defined by id & Change format to png
-// It can use to make different sizes of thumbnails at one
+// It can use to make different sizes of thumbnails at once
 $img2img = new img2img( __DIR__.'/source_example.jpg' );
 for($i=5;$i<7;$i++){
    $img2img->thumb( $i );
