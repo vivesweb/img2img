@@ -34,7 +34,7 @@
 
  define( 'IMG_FILTER_SEPIA', 'IMG_FILTER_SEPIA');
  define( 'IMG_FILTER_BLACK_WHITE', 'IMG_FILTER_BLACK_WHITE'); // Note that is different black & white that gray scale
- define( 'IMG_FILTER_VIGNETE', 'IMG_FILTER_VIGNETE');
+ define( 'IMG_FILTER_VIGNETTE', 'IMG_FILTER_VIGNETTE');
 
 
 class img2img
@@ -722,7 +722,7 @@ class img2img
 	 * IMG_FILTER_SCATTER: Applies scatter effect to the image, use args and arg2 to define the effect strength and additionally arg3 to only apply the on select pixel colors.
 	 * IMG_FILTER_SEPIA: Use arg1 to use between different types of sepia and arg2 & arg3 to define de effect
 	 * IMG_FILTER_BLACK_WHITE: Use to create a black & white image
-	 * IMG_FILTER_VIGNETE: arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
+	 * IMG_FILTER_VIGNETTE: arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
 	 * args
 	 * IMG_FILTER_BRIGHTNESS: Brightness level.
 	 * IMG_FILTER_CONTRAST: Contrast level.
@@ -754,7 +754,7 @@ class img2img
 											imagefilter($this->gd, IMG_FILTER_CONTRAST, -100);
 											break;
 
-			case IMG_FILTER_VIGNETE:		// With Imagick
+			case IMG_FILTER_VIGNETTE:		// With Imagick
 												
 											$filenametmp = '/tmp/img2img.class.'.time().'.jpg';
 

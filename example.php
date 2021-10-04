@@ -68,9 +68,9 @@ for($i=5;$i<7;$i++){
 unset( $img2img );
 
 
-// filter VIGNETE
+// filter VIGNETTE
 $img2img = new img2img( __DIR__.'/source_example.jpg' );
-$img2img->filter( IMG_FILTER_VIGNETE, 100, 100, 100, 100, ); // arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
+$img2img->filter( IMG_FILTER_VIGNETTE, 100, 100, 100, 100, ); // arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
 $img2img->save( '/tmp/img2img_result_7.jpg' );
 unset( $img2img );
 
