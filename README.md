@@ -1,6 +1,6 @@
 # img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA
 
-## V.1.0.1
+## V.1.0.0
 
 This class in pure PHP try to manage all types of images. Also can read pdf's or PSD (photoshop) files to take previews of the documents. Can create WEBP files. It try to autosearch format of image with some methods. At least will try with file extension.
 
@@ -33,8 +33,6 @@ Sample of filter SEPIA
        
        just before </policymap> in /etc/ImageMagick-7/policy.xml
        - Change ImageMagick-7 with your Imagick version
-      
-    - Requires https://github.com/zaachi/PHP-Instagram-effects
  
  
   # FILES:
@@ -242,8 +240,6 @@ filter can be one of the following:
 	 * arg4
 	 * IMG_FILTER_COLORIZE: Alpha channel, A value between 0 and 127. 0 indicates completely opaque while 127 indicates completely transparent.
 
-v.1.0.1. Support for similar Instagram filters. Thanks to https://github.com/zaachi/PHP-Instagram-effects
-IMG_FILTER_INSTGR_BUBBLES, IMG_FILTER_INSTGR_COLORISE, IMG_FILTER_INSTGR_SEPIA, IMG_FILTER_INSTGR_SEPIA2, IMG_FILTER_INSTGR_SHARPEN, IMG_FILTER_INSTGR_EMBOSS, IMG_FILTER_INSTGR_COOL, IMG_FILTER_INSTGR_OLD, IMG_FILTER_INSTGR_OLD2, IMG_FILTER_INSTGR_OLD3, IMG_FILTER_INSTGR_LIGHT, IMG_FILTER_INSTGR_AQUA, IMG_FILTER_INSTGR_FUZZY, IMG_FILTER_INSTGR_BOOST, IMG_FILTER_INSTGR_BOOST2, IMG_FILTER_INSTGR_GRAY, IMG_FILTER_INSTGR_ANTIQUE, IMG_FILTER_INSTGR_BLACKWHITE, IMG_FILTER_INSTGR_BLUR, IMG_FILTER_INSTGR_VINTAGE, IMG_FILTER_INSTGR_CONCENTRATE, IMG_FILTER_INSTGR_HERMAJESTY, IMG_FILTER_INSTGR_FRESHBLUE, IMG_FILTER_INSTGR_TENDER, IMG_FILTER_INSTGR_DREAM, IMG_FILTER_INSTGR_FROZEN, IMG_FILTER_INSTGR_FOREST, IMG_FILTER_INSTGR_RAIN, IMG_FILTER_INSTGR_ORANGEPEEL, IMG_FILTER_INSTGR_DARKEN, IMG_FILTER_INSTGR_SUMMER, IMG_FILTER_INSTGR_RETRO, IMG_FILTER_INSTGR_COUNTRY, IMG_FILTER_INSTGR_WASHED
 
 Example:
 
