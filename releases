@@ -1,4 +1,8 @@
 
+2021-10-06 v.1.0.1
+- Some bug solved parsing params at imagefilter()
+- Added method gd(). Return the gd object
+
 2021-10-04 v.1.0.1
 - Support for new similar Instagram filters. Thanks to https://github.com/zaachi/PHP-Instagram-effects
 IMG_FILTER_INSTGR_BUBBLES, IMG_FILTER_INSTGR_COLORISE, IMG_FILTER_INSTGR_SEPIA, IMG_FILTER_INSTGR_SEPIA2, IMG_FILTER_INSTGR_SHARPEN,
