@@ -271,6 +271,50 @@ Example:
 
        $gd = $img2img->gd( );
        
+- **Added method imagesetinterpolation()**
+
+Set Interpolation Method. Method can be:
+
+		IMG_BELL: Bell filter.
+		IMG_BESSEL: Bessel filter.
+		IMG_BICUBIC: Bicubic interpolation.
+		IMG_BICUBIC_FIXED: Fixed point implementation of the bicubic interpolation.
+		IMG_BILINEAR_FIXED: Fixed point implementation of the bilinear interpolation (default (also on image creation)).
+		IMG_BLACKMAN: Blackman window function.
+		IMG_BOX: Box blur filter.
+		IMG_BSPLINE: Spline interpolation.
+		IMG_CATMULLROM: Cubic Hermite spline interpolation.
+		IMG_GAUSSIAN: Gaussian function.
+		IMG_GENERALIZED_CUBIC: Generalized cubic spline fractal interpolation.
+		IMG_HERMITE: Hermite interpolation.
+		IMG_HAMMING: Hamming filter.
+		IMG_HANNING: Hanning filter.
+		IMG_MITCHELL: Mitchell filter.
+		IMG_POWER: Power interpolation.
+		IMG_QUADRATIC: Inverse quadratic interpolation.
+		IMG_SINC: Sinc function.
+		IMG_NEAREST_NEIGHBOUR: Nearest neighbour interpolation.
+		IMG_WEIGHTED4: Weighting filter.
+		IMG_TRIANGLE: Triangle interpolation.
+
+*imagesetinterpolation( $method );*
+
+Example:
+
+       $gd = $img2img->imagesetinterpolation( IMG_BICUBIC );
+       
+       
+       
+- **Added method imagescale()**
+
+Scale image using Interpolation
+
+*imagescale( $new_width, $new_height, $mode = IMG_BILINEAR_FIXED );*
+
+Example:
+
+       $img2img->->imagescale( 640, 480, IMG_BICUBIC );
+       
 
  **Of course. You can use it freely :vulcan_salute::alien:**
  
