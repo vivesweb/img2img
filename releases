@@ -1,7 +1,9 @@
 
 2021-10-06 v.1.0.2
 - Some bug solved parsing params at imagefilter()
-- Added method gd(). Return the gd object
+- Added method gd(). Returns the gd object
+- Added method imagesetinterpolation()
+- Added method imagescale(). Scale the image with interpolation
 
 2021-10-04 v.1.0.1
 - Support for new similar Instagram filters. Thanks to https://github.com/zaachi/PHP-Instagram-effects
