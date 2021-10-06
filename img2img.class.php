@@ -22,7 +22,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @link https://rafamartin10.blogspot.com/
  * @since October 2021
- * @version 1.0.1
+ * @version 1.0.2
  * @license GNU General Public License v3.0
  * 
  * 
