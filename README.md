@@ -1,4 +1,4 @@
-# img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA
+# img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA. Save to WEBP
 
 ## V.1.0.1
 
