@@ -147,7 +147,49 @@ class img2img
 	public function set_gd( $gd ){
 		$this->gd = $gd;
 	} // /set_gd()
+	
+	
 
+
+
+	/**
+	 *  return GD
+	 * 
+	 * @RETURN resource $gd
+	 */
+	public function gd(  ){
+		return $this->gd ;
+	} // /gd()
+
+
+
+
+	/**
+	 * INTERPOLATE IMAGE
+	 * 
+	 * @param constant $method
+	 */
+	public function imagesetinterpolation( $method ){
+		imagesetinterpolation( $this->gd, $method );
+	} // /imagesetinterpolation()
+
+
+
+
+
+	/**
+	 * SCALE IMAGE. USE INTERPOLATION
+	 * 
+	 * @param int $new_width
+	 * @param int $new_height
+	 * @param int $mode
+	 */
+	public function imagescale( $new_width, $new_height, $mode = IMG_BILINEAR_FIXED ){
+		$new_img =  imagescale( $this->gd,  $new_width, $new_height, $mode );
+		if( $new_img ){
+			$this->gd = $new_img;
+		}
+	} // /imagescale()
 
 
 	/**
@@ -255,6 +297,8 @@ class img2img
 								break;
 				} // /switch $this->filetype
 		} // if !gd
+		
+		imagesavealpha($this->gd, true); // set flag alpha to true
 	}// /load_image_from_file()
 
 
@@ -267,6 +311,7 @@ class img2img
 	private function load_image_from_file_not_pdf( $filename ){
 		$imageString 	= file_get_contents($filename, true);
 		$this->gd 		= @imagecreatefromstring($imageString); // see https://www.php.net/manual/en/function.imagecreatefromstring.php
+		imagesavealpha($this->gd, true);
 		unset( $imageString );
 	}// /load_image_from_file_not_pdf()
 
@@ -1034,7 +1079,17 @@ class img2img
 														break;
 			
 
-			default:				imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3, $arg4 );
+			default:				if( $filtertype == IMG_FILTER_COLORIZE ){
+										imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3, $arg4 );
+									} else if( $filtertype == IMG_FILTER_SCATTER ){
+										imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3 );
+									} else if( $filtertype == IMG_FILTER_PIXELATE ){
+										imagefilter( $this->gd, $filtertype, $arg1, $arg2 );
+									} else if( in_array( $filtertype, [ IMG_FILTER_BRIGHTNESS, IMG_FILTER_CONTRAST, IMG_FILTER_COLORIZE, IMG_FILTER_SMOOTH ] ) ){
+										imagefilter( $this->gd, $filtertype, $arg1 );									
+									} else{
+										imagefilter( $this->gd, $filtertype );									
+									}
 									break;
 		} // /Switch / Case $type
 	} // /filter()	
