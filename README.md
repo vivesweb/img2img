@@ -221,7 +221,7 @@ filter can be one of the following:
 	 * IMG_FILTER_MEAN_REMOVAL: Uses mean removal to achieve a "sketchy" effect.
 	 * IMG_FILTER_SMOOTH: Makes the image smoother. Use args to set the level of smoothness.
 	 * IMG_FILTER_PIXELATE: Applies pixelation effect to the image, use args to set the block size and arg2 to set the pixelation effect mode.
-	 * IMG_FILTER_SCATTER: Applies scatter effect to the image, use args and arg2 to define the effect strength and additionally arg3 to only apply the on select pixel colors.
+	 * IMG_FILTER_SCATTER: Applies scatter effect to the image, use args and arg2 to define the effect strength and additionally arg3 to only apply the on select pixel colors. NOTE: PHP >= PHP7.4.0
 	 * IMG_FILTER_SEPIA: Use arg1 to use between different types of sepia and arg2 & arg3 to define de effect
 	 * IMG_FILTER_BLACK_WHITE: Use to create a black & white image
 	 * IMG_FILTER_VIGNETTE: arg1: blackPoint, arg2: $whitePoint, arg3: $x, arg4: $y
@@ -231,16 +231,16 @@ filter can be one of the following:
 	 * IMG_FILTER_COLORIZE: Value of red component.
 	 * IMG_FILTER_SMOOTH: Smoothness level.
 	 * IMG_FILTER_PIXELATE: Block size in pixels.
-	 * IMG_FILTER_SCATTER: Effect substraction level. This must not be higher or equal to the addition level set with arg2.
+	 * IMG_FILTER_SCATTER: Effect substraction level. This must not be higher or equal to the addition level set with arg2. NOTE: PHP >= PHP7.4.0
 	 * IMG_FILTER_SEPIA:	Define type of sepia
 	 * arg2
 	 * IMG_FILTER_COLORIZE: Value of green component.
 	 * IMG_FILTER_PIXELATE: Whether to use advanced pixelation effect or not (defaults to false).
-	 * IMG_FILTER_SCATTER: Effect addition level.
+	 * IMG_FILTER_SCATTER: Effect addition level. NOTE: PHP >= PHP7.4.0
 	 * IMG_FILTER_SEPIA: if (arg1 == 2) Defines % of sepia. if(arg1 == 4): Define tone of sepia in Imagick sepiaToneImage()
 	 * arg3
 	 * IMG_FILTER_COLORIZE: Value of blue component.
-	 * IMG_FILTER_SCATTER: Optional array indexed color values to apply effect at.
+	 * IMG_FILTER_SCATTER: Optional array indexed color values to apply effect at. NOTE: PHP >= PHP7.4.0
 	 * arg4
 	 * IMG_FILTER_COLORIZE: Alpha channel, A value between 0 and 127. 0 indicates completely opaque while 127 indicates completely transparent.
 
