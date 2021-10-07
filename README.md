@@ -24,7 +24,9 @@ Sample of filter SEPIA
  
     - PHP with GD enabled: sudo apt install php-gd
     
-    - PHP with Imagick for some functions. It is not required for by most methods, but in some, like reading pdf or psd, you will need: sudo apt install php-imagick
+    - If you need to use IMG_FILTER_SCATTER you need at least PHP >= PHP7.4.0. See official doc: https://www.php.net/manual/en/function.imagefilter.php
+    
+    - PHP with Imagick for some functions. It is not required for by most methods, but in some, like reading pdf or psd, you will need it. Install: sudo apt install php-imagick
     
     - For open pdf's, if you get attempt to perform an operation not allowed by the security policy `PDF'
        Add 
@@ -36,6 +38,11 @@ Sample of filter SEPIA
        
       
     - Requires https://github.com/zaachi/PHP-Instagram-effects
+ 
+ 
+ # What if I don't have Imagick installed?:
+ 
+ If you do not have Imagick installed and perform some filter that use imagick, the system just won't apply that filter.
  
  
   # FILES:
