@@ -812,16 +812,16 @@ class img2img
 	 * IMG_FILTER_COLORIZE: Value of red component.
 	 * IMG_FILTER_SMOOTH: Smoothness level.
 	 * IMG_FILTER_PIXELATE: Block size in pixels.
-	 * IMG_FILTER_SCATTER: Effect substraction level. This must not be higher or equal to the addition level set with arg2.
+	 * IMG_FILTER_SCATTER: Effect substraction level. This must not be higher or equal to the addition level set with arg2. NOTE: PHP >= PHP7.4.0
 	 * IMG_FILTER_SEPIA:	Define type of sepia
 	 * arg2
 	 * IMG_FILTER_COLORIZE: Value of green component.
 	 * IMG_FILTER_PIXELATE: Whether to use advanced pixelation effect or not (defaults to false).
-	 * IMG_FILTER_SCATTER: Effect addition level.
+	 * IMG_FILTER_SCATTER: Effect addition level. NOTE: PHP >= PHP7.4.0
 	 * IMG_FILTER_SEPIA: if (arg1 == 2) Defines % of sepia. if(arg1 == 4): Define tone of sepia in Imagick sepiaToneImage()
 	 * arg3
 	 * IMG_FILTER_COLORIZE: Value of blue component.
-	 * IMG_FILTER_SCATTER: Optional array indexed color values to apply effect at.
+	 * IMG_FILTER_SCATTER: Optional array indexed color values to apply effect at. NOTE: PHP >= PHP7.4.0
 	 * arg4
 	 * IMG_FILTER_COLORIZE: Alpha channel, A value between 0 and 127. 0 indicates completely opaque while 127 indicates completely transparent.
      * 
@@ -1081,7 +1081,7 @@ class img2img
 
 			default:				if( $filtertype == IMG_FILTER_COLORIZE ){
 										imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3, $arg4 );
-									} else if( $filtertype == IMG_FILTER_SCATTER ){
+									} else if( version_compare(PHP_VERSION, '7.4.0', '>=') && $filtertype == IMG_FILTER_SCATTER ){
 										imagefilter( $this->gd, $filtertype, $arg1, $arg2, $arg3 );
 									} else if( $filtertype == IMG_FILTER_PIXELATE ){
 										imagefilter( $this->gd, $filtertype, $arg1, $arg2 );
