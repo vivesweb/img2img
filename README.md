@@ -268,7 +268,7 @@ Example:
 **FROM V.1.0.2:**
 
 
-- **Get GD object**
+- **GET GD OBJECT**
 
 Return the gd image object
 
@@ -278,7 +278,7 @@ Example:
 
        $gd = $img2img->gd( );
        
-- **Added method imagesetinterpolation()**
+- **IMAGESETINTERPOLATION()**
 
 Set Interpolation Method. Method can be:
 
@@ -312,7 +312,7 @@ Example:
        
        
        
-- **Added method imagescale()**
+- **IMAGESCALE()**
 
 Scale image using Interpolation
 
