@@ -18,7 +18,9 @@ Sample of filter SEPIA
  		
     - VirtualBox Ubuntu Server 20.04.2 LTS (Focal Fossa) with PHP7.4.3 
     
-    - Ubuntu 20.04.3 LTS (Focal Fossa). Laptop Acer Extensa 5630 with PHP 7.4.3 (cli) (built: Aug 13 2021 05:39:12) ( NTS )
+    - Ubuntu 20.04.3 LTS (Focal Fossa). Laptop Acer Extensa 5630 with PHP 7.4.3 (built: Aug 13 2021 05:39:12) ( NTS )
+    
+    - Red Hat Enterprise Linux Server release 6.10 (Santiago) PHP Version 7.3.25 (Production Server) 512Mb Memory Limit
 
  # SERVER REQUERIMENTS:
  
