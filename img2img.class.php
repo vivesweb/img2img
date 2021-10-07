@@ -793,7 +793,7 @@ class img2img
 	 * IMG_FILTER_NEGATE: Reverses all colors of the image.
 	 * IMG_FILTER_GRAYSCALE: Converts the image into grayscale by changing the red, green and blue components to their weighted sum using the same coefficients as the REC.601 luma (Y') calculation. The alpha components are retained. For palette images the result may differ due to palette limitations.
 	 * IMG_FILTER_BRIGHTNESS: Changes the brightness of the image. Use args to set the level of brightness. The range for the brightness is -255 to 255.
-	 * IMG_FILTER_CONTRAST: Changes the contrast of the image. Use args to set the level of contrast.
+	 * IMG_FILTER_CONTRAST: Changes the contrast of the image. Use args to set the level of contrast. -100 = max contrast, 0 = no change, +100 = min contrast (note the direction!)
 	 * IMG_FILTER_COLORIZE: Like IMG_FILTER_GRAYSCALE, except you can specify the color. Use args, arg2 and arg3 in the form of red, green, blue and arg4 for the alpha channel. The range for each color is 0 to 255.
 	 * IMG_FILTER_EDGEDETECT: Uses edge detection to highlight the edges in the image.
 	 * IMG_FILTER_EMBOSS: Embosses the image.
