@@ -1,6 +1,7 @@
 
 2021-10-06 v.1.0.2
 - Some bug solved parsing params at imagefilter()
+- Control IMG_FILTER_SCATTER filter on php versions < PHP7.4.0
 - Added method gd(). Returns the gd object
 - Added method imagesetinterpolation()
 - Added method imagescale(). Scale the image with interpolation
