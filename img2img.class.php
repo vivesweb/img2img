@@ -22,7 +22,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @link https://rafamartin10.blogspot.com/
  * @since October 2021
- * @version 1.0.2
+ * @version 1.0.3
  * @license GNU General Public License v3.0
  * 
  * 
@@ -779,6 +779,17 @@ class img2img
 	public function flip( $type = IMG_FLIP_HORIZONTAL ){
 		imageflip( $this->gd, $type );
 	} // /gd_base64()
+
+	
+
+    /**
+     * 
+	 * Mirror GD image
+	 * 
+     */
+	public function mirror( ){
+		$this->flip( );
+	} // /mirror()
 
 	
 
