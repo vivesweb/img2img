@@ -1,6 +1,6 @@
 # img2img. PHP Converter, sampler of pdfs & psd, do resizes & some filters in images as SEPIA. Save to WEBP
 
-## V.1.0.2
+## V.1.0.3
 
 This class in pure PHP try to manage all types of images. Also can read pdf's or PSD (photoshop) files to take previews of the documents. Can create WEBP files. It try to autosearch format of image with some methods. At least will try with file extension.
 
@@ -323,6 +323,19 @@ Scale image using Interpolation
 Example:
 
        $img2img->->imagescale( 640, 480, IMG_BICUBIC );
+
+**FROM V.1.0.3:**
+
+
+- **MIRROR**
+
+Do a mirror of the image (flip horizontal)
+
+*mirror();*
+
+Example:
+
+       $img2img->mirror( );
        
 
  **Of course. You can use it freely :vulcan_salute::alien:**
@@ -338,7 +351,7 @@ Example:
  
  @since OCTOBER 2021
  
- @version 1.0.2
+ @version 1.0.3
  
  @license GNU General Public License v3.0
 
