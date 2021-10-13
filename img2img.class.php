@@ -29,10 +29,9 @@
  */
 
 
- // For use mime_types see notes at  file_extension(()
  use Zaachi\Image\Filter;
 
- include __DIR__ . '/mime_types.php';  // Used in Mime types functions
+ include __DIR__ . '/mime_types.php';  // Used in Mime types functions. See notes at  file_extension(()
  include __DIR__ . '/PHP-Instagram-effects-master/src/Image/Filter.php';  // For instagram filters
 
  define( 'IMG_FILTER_SEPIA', 				'IMG_FILTER_SEPIA');
